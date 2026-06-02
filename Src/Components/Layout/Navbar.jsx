@@ -29,16 +29,16 @@ const navigation = {
       href: '/raquettes', // j'ai crée le lien dans la navbar redirige vers la page des raquettes
       featured: [
         {
-          name: 'New Arrivals',
+          name: 'Nouvelles Arrivées',
           href: '#',
-          imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-01.jpg',
-          imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
+          imageSrc: '../../bad_rsl2.png',
+          imageAlt: 'Nouvelles raquettes rsl couleurs noir/bleu alias NEPTUNE',
         },
         {
-          name: 'Basic Tees',
+          name: 'Nouvelles Arrivées',
           href: '#',
-          imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-02.jpg',
-          imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
+          imageSrc: '../../bad_rsl3.png',
+          imageAlt: 'nouvelles raquettes rsl couleurs noir/rouge alias VENUS',
         },
       ],
       sections: [
@@ -86,16 +86,16 @@ const navigation = {
           name: 'New Arrivals',
           href: '#',
           imageSrc:
-            'https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
-          imageAlt: 'Drawstring top with elastic loop closure and textured interior padding.',
+            '../../volantsling.png',
+          imageAlt: 'Volants à plumes LingMein 80, 12 douzaines par boîte.',
         },
-        {
-          name: 'Artwork Tees',
-          href: '#',
-          imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-02-image-card-06.jpg',
-          imageAlt:
-            'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
-        },
+        // {
+        //   name: 'Artwork Tees',
+        //   href: '#',
+        //   imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-02-image-card-06.jpg',
+        //   imageAlt:
+        //     'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
+        // },
       ],
       sections: [
         {
@@ -144,15 +144,15 @@ const navigation = {
           name: 'Nouveauté',
           href: '#',
           imageSrc:
-            'https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
-          imageAlt: 'Drawstring top with elastic loop closure and textured interior padding.',
+            '../../sac_yonex.png',
+          imageAlt: 'Sac de Badminton Yonex rouge à 3 poches.',
         },
         {
           name: 'Edition limitée',
           href: '#',
-          imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-02-image-card-06.jpg',
+          imageSrc: '../../sac_yonex2',
           imageAlt:
-            'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
+            'Sac de Badminton Yonex rouge à 4 poches.',
         },
       ],
       sections: [
@@ -190,16 +190,18 @@ const navigation = {
           name: 'Nouveauté',
           href: '#',
           imageSrc:
-            'https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
-          imageAlt: 'Drawstring top with elastic loop closure and textured interior padding.',
+            '../../chaussures_yonex.png',
+          imageAlt: 'Chaussures de badminton en nylon, couleur noir, jaune et rose.',
         },
-        {
-          name: 'Edition limitée',
-          href: '#',
-          imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-02-image-card-06.jpg',
-          imageAlt:
-            'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
-        },
+
+        // la je hide encore une fois un item "nouvelles arrivées" au cas où j'en aurais envie ou besoin.
+        // {
+        //   name: 'Edition limitée',
+        //   href: '#',
+        //   imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-02-image-card-06.jpg',
+        //   imageAlt:
+        //     'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
+        // },
       ],
       sections: [
         {
