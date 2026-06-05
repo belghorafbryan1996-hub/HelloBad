@@ -1,5 +1,6 @@
 import Navbar from './Components/layout/Navbar.jsx'
 import Home from './Pages/home.jsx'
+import ProductNav from './Components/Layout/ProductNav.jsx'
 import Raquettes from './Pages/Raquettes.jsx'
 import Shuttlecocks from './Pages/shuttlecookcs.jsx'
 import Bagagerie from './Pages/bagagerie.jsx'

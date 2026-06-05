@@ -58,6 +58,7 @@ const products = [
   {
     id: 8,
     name: 'Raquette RSL',
+    badge: "Best Seller",
     href: '#',
     price: '150€',
     imageSrc: '../../bad_rsl.jpg',

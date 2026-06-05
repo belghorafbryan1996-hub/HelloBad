@@ -389,7 +389,7 @@ export default function Example() {
                   {navigation.categories.map((category) => (
                     <Popover key={category.name} className="flex">
                       <div className="relative flex">
-                        <PopoverButton className="group relative flex items-center justify-center text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800 data-open:text-indigo-600">
+                        <PopoverButton className="group relative flex items-center justify-center text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800 data-open:text-indigo-600 ">
                           <Link to={category.href}>{category.name}</Link>
                           <span
                             aria-hidden="true"
