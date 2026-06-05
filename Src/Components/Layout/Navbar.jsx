@@ -1,6 +1,6 @@
 'use client'
 
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useRef } from 'react'
 import {
   Dialog,
   DialogBackdrop,
@@ -251,6 +251,7 @@ const navigation = {
 
 export default function Example() {
   const [open, setOpen] = useState(false)
+   const buttonRefs = useRef([])
 
   return (
     <div className="bg-white">
@@ -386,17 +387,26 @@ export default function Example() {
               {/* Flyout menus */}
               <PopoverGroup className="hidden lg:ml-8 lg:block lg:self-stretch">
                 <div className="flex h-full space-x-8">
-                  {navigation.categories.map((category) => (
+                  {navigation.categories.map((category, index) => (
                     <Popover key={category.name} className="flex">
-                      <div className="relative flex">
-                        <PopoverButton className="group relative flex items-center justify-center text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800 data-open:text-indigo-600 ">
-                          <Link to={category.href}>{category.name}</Link>
-                          <span
-                            aria-hidden="true"
-                            className="absolute inset-x-0 -bottom-px z-30 h-0.5 transition duration-200 ease-out group-data-open:bg-indigo-600"
-                          />
-                        </PopoverButton>
+                      {({ open }) => (
+                        <>
+
+                       <div 
+                              ref={(el) => (buttonRefs.current[index] = el)}
+                              onMouseEnter={() => { if (!open) buttonRefs.current[index].querySelector('button').click() }}
+                              onMouseLeave={() => { if (open) buttonRefs.current[index].querySelector('button').click() }}
+                              className="relative flex"
+                            >
+                              <PopoverButton className="group relative flex items-center justify-center text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800 data-open:text-indigo-600">
+                                <Link to={category.href}>{category.name}</Link>
+                                <span
+                                  aria-hidden="true"
+                                  className="absolute inset-x-0 -bottom-px z-30 h-0.5 transition duration-200 ease-out group-data-open:bg-indigo-600"
+                                />
+                              </PopoverButton>
                       </div>
+                                              
                       <PopoverPanel
                         transition
                         className="absolute inset-x-0 top-full z-20 w-full bg-white text-sm text-gray-500 transition data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
@@ -450,10 +460,11 @@ export default function Example() {
                           </div>
                         </div>
                       </PopoverPanel>
+                      </>
+                      )}
                     </Popover>
                   ))}
-              
-                </div>
+                </div> 
               </PopoverGroup>
 
               <div className="ml-auto flex items-center">
