@@ -1,6 +1,8 @@
 
 import Headvideo from '../Components/UI/Headvideo.jsx'
+import ProductNav from '../Components/Layout/ProductNav.jsx'
 import Cardproduct from '../Components/UI/Cardproduct.jsx'
+import Footer from '../Components/Layout/Footer.jsx'
 
 
 function Head({slogan,button}) {
@@ -20,7 +22,9 @@ function Head({slogan,button}) {
 function Home() {
   return (
     <div>
+      <ProductNav />
       <Cardproduct />
+      <Footer />
     </div>
   )
 }

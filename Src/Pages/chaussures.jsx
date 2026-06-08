@@ -1,6 +1,7 @@
 
 import Headvideo from '../Components/UI/Headvideo.jsx'
 import Cardproduct from '../Components/UI/Cardproduct.jsx'
+import Footer from '../Components/Layout/Footer.jsx'  
 
 
 function Head({slogan,button}) {
@@ -21,8 +22,10 @@ function Home() {
   return (
     <div>
       <Cardproduct />
+      <Footer />
     </div>
   )
 }
 
 export default Home
+ 

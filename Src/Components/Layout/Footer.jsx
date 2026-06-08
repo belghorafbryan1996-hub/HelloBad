@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="bg-white">
+    <div className="w-full bg-white text-gray-800 text-sm border-t border-gray-200">
       <div className="max-w-screen-lg py-10 px-4 sm:px-6 text-gray-800 sm:flex justify-between mx-auto">
         
         {/* Menu */}
