@@ -1,17 +1,18 @@
-import Navbar from './Components/layout/Navbar.jsx'
-import Home from './Pages/home.jsx'
-import ProductNav from './Components/Layout/ProductNav.jsx'
-import Raquettes from './Pages/Raquettes.jsx'
-import Shuttlecocks from './Pages/shuttlecookcs.jsx'
-import Bagagerie from './Pages/bagagerie.jsx'
-import Offres from './Pages/offres.jsx'
-import Chaussures from './Pages/chaussures.jsx'
-import PagePanier from './Pages/panier.jsx'
-import Cardproduct from './Components/UI/Cardproduct.jsx'
-import Footer from './Components/Layout/Footer.jsx'
+import Navbar from './components/layout/Navbar.jsx'
+import Home from './pages/home.jsx'
+import ProductNav from './components/layout/ProductNav.jsx'
+import Raquettes from './pages/Raquettes.jsx'
+import Shuttlecocks from './pages/shuttlecookcs.jsx'
+import Bagagerie from './pages/bagagerie.jsx'
+import Offres from './pages/offres.jsx'
+import Chaussures from './pages/chaussures.jsx'
+import PagePanier from './pages/panier.jsx'
+import Cardproduct from './components/ui/Cardproduct.jsx'
+import Footer from './components/layout/Footer.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { loadStripe } from '@stripe/stripe-js'
 import { Elements } from '@stripe/react-stripe-js'
+
 const stripePromise = loadStripe('pk_test_TYc219d874567890123456789012345678')
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           </Elements>
         } />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
