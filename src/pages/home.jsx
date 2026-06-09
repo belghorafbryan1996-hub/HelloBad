@@ -1,7 +1,7 @@
 
 import Headvideo from '../components/ui/Headvideo.jsx'
 import Cardproduct from '../components/ui/Cardproduct.jsx'
-import Footer from '../components/layout/Footer.jsx'
+
 
 
 function Head({slogan,button}) {
@@ -24,7 +24,6 @@ function Home() {
       <Head slogan="Équipe-toi comme un pro, bats-toi comme un guerrier." button="Offres"/>
       <Headvideo videoSrc="/mp4home.mp4"/>
       <Cardproduct />
-      <Footer />
     </div>
   )
 }

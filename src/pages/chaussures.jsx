@@ -1,7 +1,7 @@
 
 import Headvideo from '../components/ui/Headvideo.jsx'
 import Cardproduct from '../components/ui/Cardproduct.jsx'
-import Footer from '../components/layout/Footer.jsx'  
+  
 
 
 function Head({slogan,button}) {
@@ -22,7 +22,7 @@ function Home() {
   return (
     <div>
       <Cardproduct />
-      <Footer />
+    
     </div>
   )
 }
