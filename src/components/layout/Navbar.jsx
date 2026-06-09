@@ -281,7 +281,7 @@ export default function Example() {
             {/* Links */}
             <TabGroup className="mt-2">
               <div className="border-b border-gray-200">
-                <TabList className="-mb-px flex space-x-8 px-4">
+                <TabList className="-mb-px flex flex-col px-4">
                   {navigation.categories.map((category) => (
                     <Tab
                       key={category.name}
