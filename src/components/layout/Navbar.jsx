@@ -16,7 +16,7 @@ import {
   TabPanels,
 } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import logoHelloBad from '/Src/assets/images/logo_HellBad.png'
+import logoHelloBad from "../../assets/images/logo_HellBad.png"
 import { Link } from 'react-router-dom'
 
 //ici j'ai pris le chemijn absolue car j'ai eu un probleme avec le chemin relatif ../../assets/etc.... du coup j'ai opter pour le chemin absolue pour m'eviter des erreus de chargements d'image dans la navbar.
