@@ -1,6 +1,6 @@
 
-import Headvideo from '../Components/UI/Headvideo.jsx'
-import Cardproduct from '../Components/UI/Cardproduct.jsx'
+import Headvideo from '../components/ui/Headvideo.jsx'
+import Cardproduct from '../components/ui/Cardproduct.jsx'
 
 
 function Head({slogan,button}) {

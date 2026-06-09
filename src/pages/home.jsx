@@ -1,7 +1,7 @@
 
-import Headvideo from '../Components/UI/Headvideo.jsx'
-import Cardproduct from '../Components/UI/Cardproduct.jsx'
-import Footer from '../Components/Layout/Footer.jsx'
+import Headvideo from '../components/ui/Headvideo.jsx'
+import Cardproduct from '../components/UI/Cardproduct.jsx'
+import Footer from '../components/Layout/Footer.jsx'
 
 
 function Head({slogan,button}) {
