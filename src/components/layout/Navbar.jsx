@@ -35,7 +35,7 @@ const navigation = {
           imageAlt: 'Nouvelles raquettes rsl couleurs noir/bleu alias NEPTUNE',
         },
         {
-          name: 'Nouvelles Arrivées',
+          name: 'Nouveautés RSL',
           href: '#',
           imageSrc: '../../bad_rsl3.png',
           imageAlt: 'nouvelles raquettes rsl couleurs noir/rouge alias VENUS',

@@ -1,17 +1,18 @@
 // ✏️ Modifie ce tableau avec tes vrais produits
 const products = [
-  { id: 1, name: "Astrox 88D Pro", badge: "Nouveau", image: null },
+  { id: 1, name: "Astrox 88D Pro", badge: "Top Ventes", image: null },
   { id: 2, name: "Nanoflare 800", badge: null, image: null },
   { id: 3, name: "Duora 10", badge: null, image: null },
   { id: 4, name: "Voltric Z-Force", badge: null, image: null },
   { id: 5, name: "Arcsaber 11", badge: "Pro", image: null },
   { id: 6, name: "AS-50 Plume", badge: null, image: null },
   { id: 7, name: "SHB65Z3", badge: null, image: null },
-  { id: 8, name: "Sac Pro Tour", badge: null, image: null },
+  { id: 8, name: "Sac Pro Tour", badge: "Chic", image: null },
 ];
 
 export default function ProductNav() {
   return (
+      
     <div className="w-full bg-white ">
       <div
         className="flex items-center justify-center gap-1 px-4 py-3 overflow-x-auto"
