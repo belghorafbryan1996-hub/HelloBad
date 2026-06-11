@@ -9,7 +9,7 @@ import Cardproduct from "../components/ui/Cardproduct.jsx"
 
 // Les marques et gammes disponibles pour les boutons de filtre
 const marques = ["Toutes", "Yonex", "Victor", "RSL", "Forza"]
-const gammes = ["Toutes", "attaque", "defense", "polyvalente"]
+
 
 export default function Raquettes() {
 
@@ -27,7 +27,6 @@ useEffect(() => {
   // "Toutes" = pas de filtre = on affiche tout
   // ============================================================
   const [filtreMarque, setFiltreMarque] = useState("Toutes")
-  const [filtreGamme, setFiltreGamme] = useState("Toutes")
 
   // ============================================================
   // 3. LE FILTRAGE
@@ -36,12 +35,10 @@ useEffect(() => {
   // Si filtreMarque = "Yonex" → on garde seulement les Yonex
   // Idem pour filtreGamme
   // ============================================================
-  const produitsFiltres = tousLesProduits.filter((produit) => {
-    const marqueOk = filtreMarque === "Toutes" || produit.Marque === filtreMarque
-    const gammeOk = filtreGamme === "Toutes" || produit.gamme === filtreGamme
-    return marqueOk && gammeOk // le produit doit passer LES DEUX filtres
-  })
-
+const produitsFiltres = tousLesProduits.filter((produit) => {
+  const marqueOk = filtreMarque === "Toutes" || produit.Marque === filtreMarque
+  return marqueOk // ← supprime la condition gamme
+})
   return (
     <div>
       <ProductNav />
@@ -56,26 +53,7 @@ useEffect(() => {
             → seuls les produits Yonex s'affichent
         ============================================================ */}
 
-        {/* Filtre par Gamme */}
-        <div className="mb-4">
-          <p className="text-xs uppercase text-gray-400 font-medium mb-2 tracking-wider">Gamme</p>
-          <div className="flex gap-2 flex-wrap">
-            {gammes.map((gamme) => (
-              <button
-                key={gamme}
-                onClick={() => setFiltreGamme(gamme)}
-                className={`px-4 py-1.5 rounded-full text-sm border transition-colors ${
-                  filtreGamme === gamme
-                    ? "bg-gray-900 text-white border-gray-900" // actif
-                    : "bg-white text-gray-600 border-gray-200 hover:border-gray-400" // inactif
-                }`}
-              >
-                {gamme.charAt(0).toUpperCase() + gamme.slice(1)}
-              </button>
-            ))}
-          </div>
-        </div>
-
+      
         {/* Filtre par Marque */}
         <div className="mb-8">
           <p className="text-xs uppercase text-gray-400 font-medium mb-2 tracking-wider">Marque</p>
