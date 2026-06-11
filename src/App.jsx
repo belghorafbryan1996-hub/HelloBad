@@ -9,6 +9,7 @@ import Chaussures from './pages/chaussures.jsx'
 import PagePanier from './pages/panier.jsx'
 import Cardproduct from './components/ui/Cardproduct.jsx'
 import Footer from './components/layout/Footer.jsx'
+import Admin from './pages/admin.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { loadStripe } from '@stripe/stripe-js'
 import { Elements } from '@stripe/react-stripe-js'
@@ -31,6 +32,7 @@ function App() {
             <PagePanier />
           </Elements>
         } />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
       <Footer />
     </BrowserRouter>
