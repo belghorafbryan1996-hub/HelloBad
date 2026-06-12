@@ -5,6 +5,18 @@ export default function PagePanier() {
 
   const total = panier.reduce((sum, p) => sum + parseFloat(p.Prix_TTC), 0)
 
+  const passerCommande = () => {
+  fetch("http://localhost:80/hellobad-api/create-checkout-session.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ items: panier })
+  })
+  .then(res => res.json())
+  .then(data => {
+    window.location.href = data.url // redirige vers Stripe
+  })
+}
+
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
       <h1 className="text-2xl font-medium text-gray-900 mb-8">Votre panier</h1>
@@ -33,9 +45,12 @@ export default function PagePanier() {
 
           <div className="mt-6 flex justify-between items-center">
             <p className="text-lg font-medium">Total : {total.toFixed(2)} €</p>
-            <button className="px-6 py-3 bg-gray-900 text-white text-sm rounded-lg hover:bg-gray-700">
-              Passer la commande
-            </button>
+           <button 
+            onClick={passerCommande}
+            className="px-6 py-3 bg-gray-900 text-white text-sm rounded-lg hover:bg-gray-700"
+          >
+            Passer la commande
+          </button>
           </div>
         </div>
       )}
