@@ -11,10 +11,10 @@ import Cardproduct from './components/ui/Cardproduct.jsx'
 import Footer from './components/layout/Footer.jsx'
 import Admin from './pages/admin.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { loadStripe } from '@stripe/stripe-js'
-import { Elements } from '@stripe/react-stripe-js'
+// import { loadStripe } from '@stripe/stripe-js'
+// import { Elements } from '@stripe/react-stripe-js'
 
-const stripePromise = loadStripe('pk_test_TYc219d874567890123456789012345678')
+// const stripePromise = loadStripe('pk_test_TYc219d874567890123456789012345678')
 
 function App() {
   return (
@@ -27,11 +27,7 @@ function App() {
         <Route path="/bagagerie" element={<Bagagerie />} />
         <Route path="/offres" element={<Offres />} />
         <Route path="/chaussures" element={<Chaussures />} />
-        <Route path="/panier" element={
-          <Elements stripe={stripePromise}>
-            <PagePanier />
-          </Elements>
-        } />
+        <Route path="/panier" element={<PagePanier />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
       <Footer />

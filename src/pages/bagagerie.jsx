@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import ProductNav from '../components/layout/ProductNav.jsx'
+import { useCart } from "../context.jsx"
 
 const marques = ["Toutes", "Yonex", "Victor", "RSL", "Forza"]
 

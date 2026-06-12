@@ -1,42 +1,44 @@
-import React, { useState, useEffect } from 'react';
-import { loadStripe } from '@stripe/stripe-js';
-import { EmbeddedCheckoutProvider, EmbeddedCheckout } from '@stripe/react-stripe-js';
-
-// On initialise Stripe avec ta clé publique
-const stripePromise = loadStripe('pk_test_TYC219d874567890123456789012345678');
+import { useCart } from "../context.jsx"
 
 export default function PagePanier() {
-  const [clientSecret, setClientSecret] = useState('');
+  const { panier, supprimerDuPanier } = useCart()
 
-  useEffect(() => {
-    // 1. Ici, tu dois faire un appel API vers TON serveur (Back-End)
-    // C'est ton serveur qui va appeler l'API Stripe pour créer la session.
-    fetch("/create-checkout-session", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ items: [{ id: "un_produit_de_ton_panier" }] }),
-    })
-      .then((res) => res.json())
-      .then((data) => setClientSecret(data.clientSecret)); // On récupère le secret
-  }, []);
-
-  // Les options indispensables pour le composant Stripe
-  const options = { clientSecret };
+  const total = panier.reduce((sum, p) => sum + parseFloat(p.Prix_TTC), 0)
 
   return (
-    <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto' }}>
-      <h2>Mon Panier 🛒</h2>
-      <p>Prêt à régaler ? On passe au paiement sécurisé :</p>
-      
-      {clientSecret ? (
-        // Si on a le secret, on affiche la page Stripe directement incrustée !
-        <EmbeddedCheckoutProvider stripe={stripePromise} options={options}>
-          <EmbeddedCheckout />
-        </EmbeddedCheckoutProvider>
+    <div className="max-w-4xl mx-auto px-6 py-12">
+      <h1 className="text-2xl font-medium text-gray-900 mb-8">Votre panier</h1>
+
+      {panier.length === 0 ? (
+        <p className="text-gray-400 text-sm">Votre panier est vide.</p>
       ) : (
-        // En attendant que le serveur réponde, on fait patienter le gâté
-        <p>Chargement du paiement sécurisé...</p>
+        <div>
+          {panier.map((produit, index) => (
+            <div key={index} className="flex items-center justify-between py-4 border-b border-gray-100">
+              <div>
+                <p className="text-sm font-medium text-gray-900">{produit.Nom_produit}</p>
+                <p className="text-xs text-gray-400">{produit.Marque}</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <p className="text-sm font-medium">{parseFloat(produit.Prix_TTC).toFixed(2)} €</p>
+                <button
+                  onClick={() => supprimerDuPanier(produit.Id_Produit)}
+                  className="text-red-400 hover:text-red-600 text-xs"
+                >
+                  Supprimer
+                </button>
+              </div>
+            </div>
+          ))}
+
+          <div className="mt-6 flex justify-between items-center">
+            <p className="text-lg font-medium">Total : {total.toFixed(2)} €</p>
+            <button className="px-6 py-3 bg-gray-900 text-white text-sm rounded-lg hover:bg-gray-700">
+              Passer la commande
+            </button>
+          </div>
+        </div>
       )}
     </div>
-  );
+  )
 }

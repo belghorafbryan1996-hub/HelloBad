@@ -2,18 +2,20 @@ import { useState, useEffect } from "react"
 import Headvideo from "../components/ui/Headvideo.jsx"
 import ProductNav from "../components/layout/ProductNav.jsx"
 import Cardproduct from "../components/ui/Cardproduct.jsx"
+import { useCart } from "../context.jsx"
 
 
 
 
 
 // Les marques et gammes disponibles pour les boutons de filtre
+
 const marques = ["Toutes", "Yonex", "Victor", "RSL", "Forza"]
 
 
 export default function Raquettes() {
 
-  
+const { ajouterAuPanier } = useCart()
 const [tousLesProduits, setTousLesProduits] = useState([])
 
 useEffect(() => {
@@ -114,9 +116,12 @@ const produitsFiltres = tousLesProduits.filter((produit) => {
                 <p className="text-sm text-gray-700 mb-3">{produit.Prix_TTC ? produit.Prix_TTC.toFixed(2) : "0.00"} €</p>
 
                 {/* Bouton Ajouter au panier — on le connectera au Context après */}
-                <button className="w-full py-2 text-xs font-medium bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition-colors">
-                  Ajouter au panier
-                </button>
+              <button 
+                onClick={() => ajouterAuPanier(produit)}
+                className="w-full py-2 text-xs font-medium bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition-colors"
+              >
+                Ajouter au panier
+              </button>
               </div>
             ))}
           </div>
