@@ -1,16 +1,52 @@
-# React + Vite
+# HelloBad (Boutique E_Commerce toutnée sur le Badminton et plustard sur le sport de raquettes en général).
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+Quelques phrases sur le projet
 
-Currently, two official plugins are available:
+## Technologies utilisées
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+==========Frontend==========
+- React 19
+- Tailwind CSS 4
+- React Router DOM 7
+- Headless UI
+- Stripe.js
 
-## React Compiler
+==========Backend==========
+- PHP 8.3
+- PDO (sécurisation des requêtes SQL)
+- Stripe PHP SDK (via Composer)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+==========Base de données==========
+- MySQL 8
+- phpMyAdmin
 
-## Expanding the ESLint configuration
+==========Outils==========
+- Vite
+- WAMP (développement local)
+- Git / GitHub
+- Netlify (déploiement frontend)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+==========Fonctionnalités==========
+- 🏸 Catalogue produits par catégorie (Raquettes, Shuttlecocks, Bagagerie, Chaussures)
+- 🛒 Panier dynamique avec React Context
+- 💳 Paiement sécurisé via Stripe
+- 🔧 Panel admin complet (CRUD Produits, Catégories, Membres, Commandes)
+- 📱 Design responsive mobile-first
+- 🗄️ Base de données MySQL avec API PHP
+
+==========Installation==========
+1. Cloner le repo : `git clone https://github.com/belghorafbryan1996-hub/HelloBad`
+2. Installer les dépendances : `npm install`
+3. Lancer le projet : `npm run dev`
+4. Lancer WAMP et importer `hellobad.sql`
+5. Lancer l'API PHP dans `hellobad-api/`
+
+==========Démo==========
+[Lien vers le site déployé](https://celebrated-blini-506293.netlify.app/)
+
+==========Base de données==========
+- MySQL avec phpMyAdmin
+- 8 tables : CLIENTS, PRODUIT, CATEGORIE, COMMANDE, PAIEMENT, QUANTITE, PROMOTION, DETIENS
+- MCD réalisé avec la méthode Merise
+- Importer le fichier `hellobad.sql` pour créer la structure
