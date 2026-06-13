@@ -9,7 +9,7 @@ export default function Offres() {
   const [produits, setProduits] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:80/hellobad-api/produits.php?categorie=5")
+    fetch("https://hellobad.alwaysdata.net/produits.php?categorie=5")
       .then(res => res.json())
       .then(data => setProduits(data))
   }, [])

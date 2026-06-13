@@ -6,7 +6,7 @@ export default function PagePanier() {
   const total = panier.reduce((sum, p) => sum + parseFloat(p.Prix_TTC), 0)
 
   const passerCommande = () => {
-  fetch("http://localhost:80/hellobad-api/create-checkout-session.php", {
+  fetch("https://hellobad.alwaysdata.net/create-checkout-session.php", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ items: panier })

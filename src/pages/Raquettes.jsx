@@ -19,7 +19,7 @@ const { ajouterAuPanier } = useCart()
 const [tousLesProduits, setTousLesProduits] = useState([])
 
 useEffect(() => {
-  fetch("http://localhost:80/hellobad-api/produits.php?categorie=1")
+  fetch("https://hellobad.alwaysdata.net/produits.php?categorie=1")
     .then(res => res.json())
     .then(data => setTousLesProduits(data))
 }, [])
