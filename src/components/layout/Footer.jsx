@@ -14,6 +14,7 @@ export default function Footer() {
               <li className="my-2"><Link className="hover:text-indigo-600" to="/raquettes">Raquettes</Link></li>
               <li className="my-2"><Link className="hover:text-indigo-600" to="/shuttlecocks">Shuttlecocks</Link></li>
               <li className="my-2"><Link className="hover:text-indigo-600" to="/bagagerie">Bagagerie</Link></li>
+              <li className="my-2"><Link className="hover:text-indigo-600" to="/mentionlegale">Mention Legale</Link></li>
             </ul>
         </div>
 

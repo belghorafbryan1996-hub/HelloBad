@@ -12,6 +12,7 @@ import Footer from './components/layout/Footer.jsx'
 import Admin from './pages/admin.jsx'
 import Success from './pages/success.jsx'
 import Contact from './pages/contact.jsx'
+import Mentionlegale from './pages/mentionlegale.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
@@ -44,6 +45,7 @@ function App() {
             <Route path="/admin" element={<Admin />} />
             <Route path="/success" element={<Success />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/mentionlegale" element={<Mentionlegale />} />
           </Routes>
           </main>
           <Footer />
