@@ -22,8 +22,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col w-full">
           <Navbar />
+          <main className="flex-1 w-full">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/raquettes" element={<Raquettes />} />
@@ -36,6 +37,7 @@ function App() {
             <Route path="/success" element={<Success />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+          </main>
           <Footer />
       </div>
     </BrowserRouter>

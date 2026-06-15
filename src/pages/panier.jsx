@@ -47,7 +47,7 @@ export default function PagePanier() {
             <p className="text-lg font-medium">Total : {total.toFixed(2)} €</p>
            <button 
             onClick={passerCommande}
-            className="px-6 py-3 bg-gray-900 text-white text-sm rounded-lg hover:bg-gray-700"
+            className="px-6 py-3 bg-gray-900 text-white text-sm rounded-lg hover:bg-indigo-600"
           >
             Passer la commande
           </button>
