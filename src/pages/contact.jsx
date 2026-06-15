@@ -10,7 +10,7 @@ export default function Contact() {
   
   return (
     <div className="flex min-h-screen items-center justify-start bg-white">
-      <div className="max-screen-lg">
+      <div className="max-screen-md">
         <h1 className="text-4xl font-medium">Contactez-nous</h1>
         <p className="mt-3">Envoyez-nous un message :</p>
 
@@ -35,7 +35,7 @@ export default function Contact() {
                 <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600">Votre message</label>
               </div>
             </div>
-            <button type="submit" className="mt-5 rounded-md bg-gray-900 px-10 py-2 text-white ">Envoyer</button>
+            <button type="submit" className="mt-5 rounded-md bg-gray-900 px-10 py-2 text-white">Envoyer</button>
           </form>
         )}
       </div>
