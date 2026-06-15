@@ -10,7 +10,7 @@ export default function Contact() {
   
   return (
     <div className="flex min-h-screen items-center justify-start bg-white">
-      <div className="max-w-4xl mx-auto max-w-lg">
+      <div className="max-screen-lg">
         <h1 className="text-4xl font-medium">Contactez-nous</h1>
         <p className="mt-3">Envoyez-nous un message :</p>
 
