@@ -27,23 +27,34 @@ export default function Footer() {
         </div>
 
         {/* Contact */}
-        <div className="p-5 sm:w-3/12">
+        <div className="p-5 sm:w-3/12"> 
           <div className="text-sm uppercase text-indigo-600 font-bold">Contact</div>
-          <Link to="/contact" className="hover:text-indigo-600">Contactez-nous</Link>
-          <ul>
-            <li className="my-2">
-              <a className="hover:text-indigo-600" href="#">1 Bd de romainvillers 77700 Bailly-Romainvillliers</a>
-            </li>
-             <li className="my-2">
-              <a className="hover:text-indigo-600" href="#">06.33.33.33.33</a>
-            </li>
-            <li className="my-2">
-              <a className="hover:text-indigo-600" href="#">Hellobad@gmail.com</a>
-            </li>
-          </ul>
+                <ul>
+                  <li className="my-2">
+                    <a>1 Bd de romainvillers 77700 Bailly-Romainvillliers</a>
+                  </li>
+                  <li className="my-2">
+                    <a>06.33.33.33.33</a>
+                  </li>
+                  <li className="my-2">
+                    <a>Hellobad@gmail.com</a>
+                  </li>
+                </ul>
+              
+              {/* création du bouton pour le formulaire de contact */}
+
+              <Link to="/contact">
+                  <button class = "  text-white py-2 px-4 rounded-full bg-indigo-600 shadow-lg shadow-indigo-600/50" >
+                    Contactez-nous
+                  </button>
+              </Link> 
+
         </div>
 
+
       </div>
+
+    {/* Je choisi de hide volontairement et de ne pas supprimer les reseaux que je n'utilise pas car ils ont déjà présent sur le template tailwind et à l'avenir il est probable que je les utilise. */}
 
       {/* Bottom */}
       <div className="flex py-5 m-auto text-gray-800 text-sm flex-col items-center border-t max-w-screen-xl">
