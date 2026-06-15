@@ -13,15 +13,22 @@ import Admin from './pages/admin.jsx'
 import Success from './pages/success.jsx'
 import Contact from './pages/contact.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
-// import { loadStripe } from '@stripe/stripe-js'
-// import { Elements } from '@stripe/react-stripe-js'
+function ScrollToTop() {
+  const { pathname } = useLocation()
 
-// const stripePromise = loadStripe('pk_test_TYc219d874567890123456789012345678')
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
+  return null
+}
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop /> 
       <div className="min-h-screen flex flex-col w-full">
           <Navbar />
           <main className="flex-1 w-full">
