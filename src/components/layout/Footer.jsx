@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+
+
 export default function Footer() {
   return (
     <div className="w-full bg-white text-gray-800 text-sm border-t border-gray-200">
@@ -27,6 +29,7 @@ export default function Footer() {
         {/* Contact */}
         <div className="p-5 sm:w-3/12">
           <div className="text-sm uppercase text-indigo-600 font-bold">Contact</div>
+          <Link to="/contact" className="hover:text-indigo-600">Contactez-nous</Link>
           <ul>
             <li className="my-2">
               <a className="hover:text-indigo-600" href="#">1 Bd de romainvillers 77700 Bailly-Romainvillliers</a>

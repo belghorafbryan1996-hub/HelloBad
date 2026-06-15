@@ -11,7 +11,9 @@ import Cardproduct from './components/ui/Cardproduct.jsx'
 import Footer from './components/layout/Footer.jsx'
 import Admin from './pages/admin.jsx'
 import Success from './pages/success.jsx'
+import Contact from './pages/contact.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 // import { loadStripe } from '@stripe/stripe-js'
 // import { Elements } from '@stripe/react-stripe-js'
 
@@ -32,6 +34,7 @@ function App() {
             <Route path="/panier" element={<PagePanier />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/success" element={<Success />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
       </div>

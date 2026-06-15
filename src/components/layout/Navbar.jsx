@@ -28,39 +28,39 @@ const navigation = {
       href: '/raquettes',
       featured: [
         { name: 'Nouvelles Arrivées', href: '/raquettes', imageSrc: '../../bad_rsl2.png', imageAlt: 'Nouvelles raquettes RSL' },
-        { name: 'Nouveautés RSL', href: '/raquettes', imageSrc: '../../bad_rsl3.png', imageAlt: 'Raquettes RSL' },
+        // { name: 'Nouveautés RSL', href: '/raquettes', imageSrc: '../../bad_rsl3.png', imageAlt: 'Raquettes RSL' },
       ],
       sections: [
-        {
-          id: 'Gamme Attaques', name: 'Gammes Attaques',
-          items: [
-            { name: 'Browse All', href: '/raquettes' },
-            { name: 'Yonex', href: '/raquettes' },
-            { name: 'Victor', href: '/raquettes' },
-            { name: 'RSL', href: '/raquettes' },
-            { name: 'Forza', href: '/raquettes' },
-          ],
-        },
-        {
-          id: 'Gamme Défenses', name: 'Gammes Défenses',
-          items: [
-            { name: 'Browse All', href: '/raquettes' },
-            { name: 'Yonex', href: '/raquettes' },
-            { name: 'Victor', href: '/raquettes' },
-            { name: 'RSL', href: '/raquettes' },
-            { name: 'Forza', href: '/raquettes' },
-          ],
-        },
-        {
-          id: 'Gamme Polyvalentes', name: 'Gammes Polyvalentes',
-          items: [
-            { name: 'Browse All', href: '/raquettes' },
-            { name: 'Yonex', href: '/raquettes' },
-            { name: 'Victor', href: '/raquettes' },
-            { name: 'RSL', href: '/raquettes' },
-            { name: 'Forza', href: '/raquettes' },
-          ],
-        },
+        // {
+        //   id: 'Gamme Attaques', name: 'Gammes Attaques',
+        //   items: [
+        //     { name: 'Browse All', href: '/raquettes' },
+        //     { name: 'Yonex', href: '/raquettes' },
+        //     { name: 'Victor', href: '/raquettes' },
+        //     { name: 'RSL', href: '/raquettes' },
+        //     { name: 'Forza', href: '/raquettes' },
+        //   ],
+        // },
+        // {
+        //   id: 'Gamme Défenses', name: 'Gammes Défenses',
+        //   items: [
+        //     { name: 'Browse All', href: '/raquettes' },
+        //     { name: 'Yonex', href: '/raquettes' },
+        //     { name: 'Victor', href: '/raquettes' },
+        //     { name: 'RSL', href: '/raquettes' },
+        //     { name: 'Forza', href: '/raquettes' },
+        //   ],
+        // },
+        // {
+        //   id: 'Gamme Polyvalentes', name: 'Gammes Polyvalentes',
+        //   items: [
+        //     { name: 'Browse All', href: '/raquettes' },
+        //     { name: 'Yonex', href: '/raquettes' },
+        //     { name: 'Victor', href: '/raquettes' },
+        //     { name: 'RSL', href: '/raquettes' },
+        //     { name: 'Forza', href: '/raquettes' },
+        //   ],
+        // },
       ],
     },
     {
@@ -68,38 +68,38 @@ const navigation = {
       name: 'Shuttlecocks',
       href: '/shuttlecocks',
       featured: [
-        { name: 'New Arrivals', href: '/shuttlecocks', imageSrc: '../../volantsling.png', imageAlt: 'Volants plumes' },
+        // { name: 'New Arrivals', href: '/shuttlecocks', imageSrc: '../../volantsling.png', imageAlt: 'Volants plumes' },
       ],
       sections: [
-        {
-          id: 'Volants en plumes', name: 'Volants en plumes',
-          items: [
-            { name: 'Browse All', href: '/shuttlecocks' },
-            { name: 'Yonex', href: '/shuttlecocks' },
-            { name: 'Victor', href: '/shuttlecocks' },
-            { name: 'RSL', href: '/shuttlecocks' },
-            { name: 'Forza', href: '/shuttlecocks' },
-          ],
-        },
-        {
-          id: 'Volants Hybrides', name: 'Volants Hybrides',
-          items: [
-            { name: 'Browse All', href: '/shuttlecocks' },
-            { name: 'Yonex', href: '/shuttlecocks' },
-            { name: 'Victor', href: '/shuttlecocks' },
-            { name: 'RSL', href: '/shuttlecocks' },
-            { name: 'Forza', href: '/shuttlecocks' },
-          ],
-        },
-        {
-          id: 'Volants en nylon', name: 'Volants en nylon',
-          items: [
-            { name: 'Browse All', href: '/shuttlecocks' },
-            { name: 'Yonex', href: '/shuttlecocks' },
-            { name: 'Victor', href: '/shuttlecocks' },
-            { name: 'RSL', href: '/shuttlecocks' },
-          ],
-        },
+        // {
+        //   id: 'Volants en plumes', name: 'Volants en plumes',
+        //   items: [
+        //     { name: 'Browse All', href: '/shuttlecocks' },
+        //     { name: 'Yonex', href: '/shuttlecocks' },
+        //     { name: 'Victor', href: '/shuttlecocks' },
+        //     { name: 'RSL', href: '/shuttlecocks' },
+        //     { name: 'Forza', href: '/shuttlecocks' },
+        //   ],
+        // },
+        // {
+        //   id: 'Volants Hybrides', name: 'Volants Hybrides',
+        //   items: [
+        //     { name: 'Browse All', href: '/shuttlecocks' },
+        //     { name: 'Yonex', href: '/shuttlecocks' },
+        //     { name: 'Victor', href: '/shuttlecocks' },
+        //     { name: 'RSL', href: '/shuttlecocks' },
+        //     { name: 'Forza', href: '/shuttlecocks' },
+        //   ],
+        // },
+        // {
+        //   id: 'Volants en nylon', name: 'Volants en nylon',
+        //   items: [
+        //     { name: 'Browse All', href: '/shuttlecocks' },
+        //     { name: 'Yonex', href: '/shuttlecocks' },
+        //     { name: 'Victor', href: '/shuttlecocks' },
+        //     { name: 'RSL', href: '/shuttlecocks' },
+        //   ],
+        // },
       ],
     },
     {
@@ -107,30 +107,30 @@ const navigation = {
       name: 'Bagagerie',
       href: '/bagagerie',
       featured: [
-        { name: 'Nouveauté', href: '/bagagerie', imageSrc: '../../sac_yonex.png', imageAlt: 'Sac Yonex 3 poches' },
-        { name: 'Edition limitée', href: '/bagagerie', imageSrc: '../../sac_yonex2.png', imageAlt: 'Sac Yonex 4 poches' },
+        // { name: 'Nouveauté', href: '/bagagerie', imageSrc: '../../sac_yonex.png', imageAlt: 'Sac Yonex 3 poches' },
+        // { name: 'Edition limitée', href: '/bagagerie', imageSrc: '../../sac_yonex2.png', imageAlt: 'Sac Yonex 4 poches' },
       ],
       sections: [
-        {
-          id: 'Sac 3 poches', name: 'Sac 3 poches',
-          items: [
-            { name: 'Browse All', href: '/bagagerie' },
-            { name: 'Yonex', href: '/bagagerie' },
-            { name: 'Victor', href: '/bagagerie' },
-            { name: 'RSL', href: '/bagagerie' },
-            { name: 'Forza', href: '/bagagerie' },
-          ],
-        },
-        {
-          id: 'Sac 2 poches', name: 'Sac 2 poches',
-          items: [
-            { name: 'Browse All', href: '/bagagerie' },
-            { name: 'Yonex', href: '/bagagerie' },
-            { name: 'Victor', href: '/bagagerie' },
-            { name: 'RSL', href: '/bagagerie' },
-            { name: 'Forza', href: '/bagagerie' },
-          ],
-        },
+        // {
+        //   id: 'Sac 3 poches', name: 'Sac 3 poches',
+        //   items: [
+        //     { name: 'Browse All', href: '/bagagerie' },
+        //     { name: 'Yonex', href: '/bagagerie' },
+        //     { name: 'Victor', href: '/bagagerie' },
+        //     { name: 'RSL', href: '/bagagerie' },
+        //     { name: 'Forza', href: '/bagagerie' },
+        //   ],
+        // },
+        // {
+        //   id: 'Sac 2 poches', name: 'Sac 2 poches',
+        //   items: [
+        //     { name: 'Browse All', href: '/bagagerie' },
+        //     { name: 'Yonex', href: '/bagagerie' },
+        //     { name: 'Victor', href: '/bagagerie' },
+        //     { name: 'RSL', href: '/bagagerie' },
+        //     { name: 'Forza', href: '/bagagerie' },
+        //   ],
+        // },
       ],
     },
     {
@@ -138,18 +138,18 @@ const navigation = {
       name: 'Chaussures',
       href: '/chaussures',
       featured: [
-        { name: 'Nouveauté', href: '/chaussures', imageSrc: '../../chaussures_yonex.png', imageAlt: 'Chaussures Yonex' },
+        // { name: 'Nouveauté', href: '/chaussures', imageSrc: '../../chaussures_yonex.png', imageAlt: 'Chaussures Yonex' },
       ],
       sections: [
-        {
-          id: 'Chaussures', name: 'Chaussures',
-          items: [
-            { name: 'Browse All', href: '/chaussures' },
-            { name: 'Yonex', href: '/chaussures' },
-            { name: 'Victor', href: '/chaussures' },
-            { name: 'Forza', href: '/chaussures' },
-          ],
-        },
+        // {
+        //   id: 'Chaussures', name: 'Chaussures',
+        //   items: [
+        //     { name: 'Browse All', href: '/chaussures' },
+        //     { name: 'Yonex', href: '/chaussures' },
+        //     { name: 'Victor', href: '/chaussures' },
+        //     { name: 'Forza', href: '/chaussures' },
+        //   ],
+        // },
       ],
     },
     {
@@ -157,19 +157,18 @@ const navigation = {
       name: 'Offres',
       href: '/offres',
       featured: [
-        { name: 'Remise', href: '/offres', imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg', imageAlt: 'Offres' },
       ],
       sections: [
-        {
-          id: 'Promotions', name: 'Promotions',
-          items: [
-            { name: 'Browse All', href: '/offres' },
-            { name: 'Yonex', href: '/offres' },
-            { name: 'Victor', href: '/offres' },
-            { name: 'RSL', href: '/offres' },
-            { name: 'Forza', href: '/offres' },
-          ],
-        },
+        // {
+        //   id: 'Promotions', name: 'Promotions',
+        //   items: [
+        //     { name: 'Browse All', href: '/offres' },
+        //     { name: 'Yonex', href: '/offres' },
+        //     { name: 'Victor', href: '/offres' },
+        //     { name: 'RSL', href: '/offres' },
+        //     { name: 'Forza', href: '/offres' },
+        //   ],
+        // },
       ],
     },
   ],
