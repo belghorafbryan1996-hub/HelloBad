@@ -1,16 +1,21 @@
 // ✏️ Modifie ce tableau avec tes vrais produits
-const products = [
-  { id: 1, name: "Astrox 88D Pro", badge: "Top Ventes", image: null },
-  { id: 2, name: "Nanoflare 800", badge: null, image: null },
-  { id: 3, name: "Duora 10", badge: null, image: null },
-  { id: 4, name: "Voltric Z-Force", badge: null, image: null },
-  { id: 5, name: "Arcsaber 11", badge: "Pro", image: null },
-  { id: 6, name: "AS-50 Plume", badge: null, image: null },
-  { id: 7, name: "SHB65Z3", badge: null, image: null },
-  { id: 8, name: "Sac Pro Tour", badge: "Chic", image: null },
-];
+import { useState, useEffect } from "react"
+  
+
 
 export default function ProductNav() {
+
+const [tousLesProduits, setTousLesProduits] = useState([])
+
+  useEffect(() => {
+    fetch("https://hellobad.alwaysdata.net/produits.php")
+      .then(res => res.json())
+      .then(data => setTousLesProduits(data))
+  }, [])
+
+const topProduits = [...tousLesProduits].sort(() => Math.random() - 0.5)
+const huitTopProduits = topProduits.slice(0, 8)
+
   return (
       
     <div className="w-full bg-white ">
@@ -18,9 +23,9 @@ export default function ProductNav() {
         className="flex items-center justify-center gap-1 px-4 py-3 overflow-x-auto"
         style={{ scrollbarWidth: "none" }}
       >
-        {products.map((product) => (
+        {huitTopProduits.map((product) => (
           <a
-            key={product.id}
+            key={product.Id_Produit}
             href="#"
             className="relative flex flex-col items-center gap-2 px-3 py-3 rounded-2xl hover:bg-gray-50 transition-colors group flex-shrink-0 w-24"
           >
@@ -33,10 +38,10 @@ export default function ProductNav() {
 
             {/* Image produit */}
             <div className="w-16 h-16 flex items-center justify-center">
-              {product.image ? (
+              {product.Image_url ? (
                 <img
-                  src={product.image}
-                  alt={product.name}
+                  src={product.Image_url}
+                  alt={product.Nom_produit}
                   className="w-full h-full object-contain"
                 />
               ) : (
@@ -47,7 +52,7 @@ export default function ProductNav() {
 
             {/* Nom du produit */}
             <span className="text-[11px] font-medium text-center text-gray-800 leading-tight group-hover:text-black transition-colors">
-              {product.name}
+              {product.Nom_produit}
             </span>
           </a>
         ))}

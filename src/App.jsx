@@ -20,19 +20,21 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/raquettes" element={<Raquettes />} />
-        <Route path="/shuttlecocks" element={<Shuttlecocks />} />
-        <Route path="/bagagerie" element={<Bagagerie />} />
-        <Route path="/offres" element={<Offres />} />
-        <Route path="/chaussures" element={<Chaussures />} />
-        <Route path="/panier" element={<PagePanier />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/success" element={<Success />} />
-      </Routes>
-      <Footer />
+      <div className="min-h-screen flex flex-col">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/raquettes" element={<Raquettes />} />
+            <Route path="/shuttlecocks" element={<Shuttlecocks />} />
+            <Route path="/bagagerie" element={<Bagagerie />} />
+            <Route path="/offres" element={<Offres />} />
+            <Route path="/chaussures" element={<Chaussures />} />
+            <Route path="/panier" element={<PagePanier />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/success" element={<Success />} />
+          </Routes>
+          <Footer />
+      </div>
     </BrowserRouter>
   )
 }

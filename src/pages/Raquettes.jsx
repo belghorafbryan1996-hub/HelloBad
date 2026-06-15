@@ -91,7 +91,8 @@ const produitsFiltres = tousLesProduits.filter((produit) => {
             Aucun produit ne correspond à ces filtres.
           </p>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 ">
+            
             {produitsFiltres.map((produit) => (
               <div key={produit.Id_Produit} className="group cursor-pointer">
                 {/* Image */}
