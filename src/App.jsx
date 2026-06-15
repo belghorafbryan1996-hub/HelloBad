@@ -13,6 +13,7 @@ import Admin from './pages/admin.jsx'
 import Success from './pages/success.jsx'
 import Contact from './pages/contact.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 function ScrollToTop() {
