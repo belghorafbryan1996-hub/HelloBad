@@ -9,8 +9,8 @@ export default function Contact() {
   }
   
   return (
-    <div className="flex min-h-screen items-center justify-start bg-white">
-      <div className="max-screen-md">
+    <div className="flex min-h-screen items-center justify-center bg-white px-4">
+      <div className="w-full max-w-lg">
         <h1 className="text-4xl font-medium">Contactez-nous</h1>
         <p className="mt-3">Envoyez-nous un message :</p>
 
