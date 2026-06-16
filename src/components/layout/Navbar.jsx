@@ -5,10 +5,6 @@ import {
   Dialog,
   DialogBackdrop,
   DialogPanel,
-  Popover,
-  PopoverButton,
-  PopoverGroup,
-  PopoverPanel,
   Tab,
   TabGroup,
   TabList,
@@ -22,43 +18,11 @@ import { useCart } from "../../context.jsx"
 
 const navigation = {
   categories: [
-    {
-      id: 'Raquettes',
-      name: 'Raquettes',
-      href: '/raquettes',
-      featured: [
-        { name: 'Nouvelles Arrivées', href: '/raquettes', imageSrc: '../../bad_rsl2.png', imageAlt: 'Nouvelles raquettes RSL' },
-      ],
-      sections: [],
-    },
-    {
-      id: 'Shuttlecocks',
-      name: 'Shuttlecocks',
-      href: '/shuttlecocks',
-      featured: [],
-      sections: [],
-    },
-    {
-      id: 'Bagagerie',
-      name: 'Bagagerie',
-      href: '/bagagerie',
-      featured: [],
-      sections: [],
-    },
-    {
-      id: 'Chaussures',
-      name: 'Chaussures',
-      href: '/chaussures',
-      featured: [],
-      sections: [],
-    },
-    {
-      id: 'Offres',
-      name: 'Offres',
-      href: '/offres',
-      featured: [],
-      sections: [],
-    },
+    { id: 'Raquettes', name: 'Raquettes', href: '/raquettes' },
+    { id: 'Shuttlecocks', name: 'Shuttlecocks', href: '/shuttlecocks' },
+    { id: 'Bagagerie', name: 'Bagagerie', href: '/bagagerie' },
+    { id: 'Chaussures', name: 'Chaussures', href: '/chaussures' },
+    { id: 'Offres', name: 'Offres', href: '/offres' },
   ],
 }
 
@@ -77,8 +41,7 @@ export default function Example() {
 
   const deconnexion = () => {
     localStorage.removeItem('user')
-    setUser(null)
-    navigate('/')
+    window.location.href = '/'
   }
 
   const handleMobileNav = (href) => {
@@ -101,45 +64,26 @@ export default function Example() {
               </button>
             </div>
 
-            <TabGroup className="mt-2">
-              <div className="border-b border-gray-200">
-                <TabList className="-mb-px flex flex-col px-4">
-                  {navigation.categories.map((category) => (
-                    <Tab key={category.name} className="flex-1 border-b-2 border-transparent px-1 py-4 text-base font-medium whitespace-nowrap text-gray-900 data-selected:border-indigo-600 data-selected:text-indigo-600">
-                      <span onClick={() => handleMobileNav(category.href)} className="cursor-pointer">
-                        {category.name}
-                      </span>
-                    </Tab>
-                  ))}
-                </TabList>
-              </div>
-              <TabPanels as={Fragment}>
-                {navigation.categories.map((category) => (
-                  <TabPanel key={category.name} className="space-y-10 px-4 pt-10 pb-8">
-                    <div className="grid grid-cols-2 gap-x-4">
-                      {category.featured.map((item) => (
-                        <div key={item.name} className="group relative text-sm">
-                          <img alt={item.imageAlt} src={item.imageSrc} className="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75" />
-                          <Link to={item.href} onClick={() => setOpen(false)} className="mt-6 block font-medium text-gray-900">
-                            <span aria-hidden="true" className="absolute inset-0 z-10" />
-                            {item.name}
-                          </Link>
-                        </div>
-                      ))}
-                    </div>
-                  </TabPanel>
-                ))}
-              </TabPanels>
-            </TabGroup>
+            {/* Categories mobile */}
+            <div className="mt-2 border-b border-gray-200 px-4 pb-4">
+              {navigation.categories.map((category) => (
+                <div key={category.id} className="py-3">
+                  <span onClick={() => handleMobileNav(category.href)} className="cursor-pointer text-base font-medium text-gray-900">
+                    {category.name}
+                  </span>
+                </div>
+              ))}
+            </div>
 
+            {/* Connexion mobile */}
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               {user ? (
                 <>
                   <div className="flow-root">
-                    <span className="-m-2 block p-2 font-medium text-gray-900">Bonjour {user.Nom} !</span>
+                    <span className="block font-medium text-gray-900">Bonjour {user.Nom} !</span>
                   </div>
                   <div className="flow-root">
-                    <button onClick={deconnexion} className="-m-2 block p-2 font-medium text-red-600">Déconnexion</button>
+                    <button onClick={deconnexion} className="block font-medium text-red-600">Déconnexion</button>
                   </div>
                 </>
               ) : (
@@ -161,6 +105,8 @@ export default function Example() {
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="border-b border-gray-200">
             <div className="flex h-16 items-center">
+
+              {/* Burger mobile */}
               <button type="button" onClick={() => setOpen(true)} className="relative rounded-md bg-white p-2 text-gray-400 lg:hidden">
                 <span className="absolute -inset-0.5" />
                 <span className="sr-only">Open menu</span>
@@ -170,30 +116,26 @@ export default function Example() {
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <Link to="/">
-                  <span className="sr-only">HELLOBAD</span>
                   <img src={logoHelloBad} alt="logo_HelloBad" className="h-8 w-auto"/>
                 </Link>
               </div>
 
-              {/* Categories desktop - sans hover */}
-              <PopoverGroup className="hidden lg:ml-8 lg:block lg:self-stretch">
-                <div className="flex h-full space-x-8">
-                  {navigation.categories.map((category) => (
-                    <div key={category.name} className="flex items-center">
-                      <Link
-                        to={category.href}
-                        className="text-sm font-medium text-gray-700 hover:text-gray-800"
-                      >
-                        {category.name}
-                      </Link>
-                    </div>
-                  ))}
-                </div>
-              </PopoverGroup>
+              {/* Categories desktop */}
+              <div className="hidden lg:ml-8 lg:flex lg:space-x-8">
+                {navigation.categories.map((category) => (
+                  <Link
+                    key={category.id}
+                    to={category.href}
+                    className="text-sm font-medium text-gray-700 hover:text-gray-900"
+                  >
+                    {category.name}
+                  </Link>
+                ))}
+              </div>
 
               {/* Desktop right */}
               <div className="ml-auto flex items-center">
-                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                <div className="hidden lg:flex lg:items-center lg:space-x-6">
                   {user ? (
                     <>
                       <span className="text-sm text-gray-700">Bonjour {user.Nom} !</span>
@@ -215,10 +157,10 @@ export default function Example() {
                   <Link to="/panier" className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon aria-hidden="true" className="size-6 shrink-0 text-gray-400 group-hover:text-gray-500" />
                     <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">{panier.length}</span>
-                    <span className="sr-only">items in cart, view bag</span>
                   </Link>
                 </div>
               </div>
+
             </div>
           </div>
         </nav>
