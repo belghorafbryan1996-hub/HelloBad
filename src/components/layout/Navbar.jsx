@@ -254,10 +254,10 @@ export default function Example() {
 
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <div className="flow-root">
-                <Link to="/signin" onClick={() => setOpen(false)} className="-m-2 block p-2 font-medium text-gray-900">Sign in</Link>
+                <Link to="/connexion" onClick={() => setOpen(false)} className="-m-2 block p-2 font-medium text-gray-900">Connexion</Link>
               </div>
               <div className="flow-root">
-                <Link to="/signup" onClick={() => setOpen(false)} className="-m-2 block p-2 font-medium text-gray-900">Create account</Link>
+                <Link to="/inscription" onClick={() => setOpen(false)} className="-m-2 block p-2 font-medium text-gray-900">Inscription</Link>
               </div>
             </div>
           </DialogPanel>
@@ -347,9 +347,9 @@ export default function Example() {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">Sign in</a>
+                  <Link to="/connexion" className="text-sm font-medium text-gray-700 hover:text-gray-800">Connexion</Link>
                   <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
-                  <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">Create account</a>
+                  <Link to="/inscription" className="text-sm font-medium text-gray-700 hover:text-gray-800">Inscription</Link>
                 </div>
 
                 {/* Ici j'ai hide l'option de recherche implementée par tailwind, pour le moment et pour la demo je ne l'ai pas mise en servcie,

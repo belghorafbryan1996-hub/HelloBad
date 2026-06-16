@@ -45,7 +45,7 @@ export default function Footer() {
               {/* création du bouton pour le formulaire de contact */}
 
               <Link to="/contact">
-                  <button class = "  text-white py-2 px-4 rounded-full bg-indigo-600 shadow-lg shadow-indigo-600/50" >
+                  <button className = "  text-white py-2 px-4 rounded-full bg-indigo-600 shadow-lg shadow-indigo-600/50" >
                     Contactez-nous
                   </button>
               </Link> 

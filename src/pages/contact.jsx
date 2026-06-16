@@ -5,7 +5,7 @@ export default function Contact() {
 
 const handleSubmit = async (e) => {
   e.preventDefault()
-  console.log("Formulaire soumis !")
+  // console.log("Formulaire soumis !")
   
   const formData = new FormData(e.target)
     console.log("Données :", {  // ← et ça
