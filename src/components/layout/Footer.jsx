@@ -8,7 +8,7 @@ export default function Footer() {
         
         {/* Menu */}
       <div className="p-5 sm:w-2/12 border-r">
-          <div className="text-sm uppercase text-indigo-600 font-bold">Menu</div>
+          <div className="text-sm uppercase text-cyan-500 font-bold">Menu</div>
             <ul>
               <li className="my-2"><Link className="hover:text-indigo-600" to="/">Home</Link></li>
               <li className="my-2"><Link className="hover:text-indigo-600" to="/raquettes">Raquettes</Link></li>
@@ -20,7 +20,7 @@ export default function Footer() {
 
         {/* Centre */}
         <div className="p-5 sm:w-7/12 border-r text-center">
-          <h3 className="font-bold text-xl text-indigo-600 mb-4">HELLOBAD</h3>
+          <h3 className="font-bold text-xl text-cyan-500 mb-4">HELLOBAD</h3>
           <p className="text-gray-500 text-sm mb-10">
             Équipe-toi comme un pro, bats-toi comme un guerrier. 
             Retrouvez les meilleures raquettes, volants et équipements de badminton.
@@ -29,7 +29,7 @@ export default function Footer() {
 
         {/* Contact */}
         <div className="p-5 sm:w-3/12"> 
-          <div className="text-sm uppercase text-indigo-600 font-bold">Contact</div>
+          <div className="text-sm uppercase text-cyan-500 font-bold">Contact</div>
                 <ul>
                   <li className="my-2">
                     <a>1 Bd de romainvillers 77700 Bailly-Romainvillliers</a>
