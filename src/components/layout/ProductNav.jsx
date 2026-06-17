@@ -1,4 +1,4 @@
-// ✏️ Modifie ce tableau avec tes vrais produits
+
 import { useState, useEffect } from "react"
   
 

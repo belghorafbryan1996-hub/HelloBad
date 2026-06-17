@@ -23,20 +23,10 @@ useEffect(() => {
     .then(res => res.json())
     .then(data => setTousLesProduits(data))
 }, [])
-  // ============================================================
-  // 2. LES FILTRES ACTIFS
-  // useState stocke quelle marque/gamme est sélectionnée
-  // "Toutes" = pas de filtre = on affiche tout
-  // ============================================================
+  
   const [filtreMarque, setFiltreMarque] = useState("Toutes")
 
-  // ============================================================
-  // 3. LE FILTRAGE
-  // On filtre tousLesProduits selon les filtres actifs
-  // Si filtreMarque = "Toutes" → on garde tout
-  // Si filtreMarque = "Yonex" → on garde seulement les Yonex
-  // Idem pour filtreGamme
-  // ============================================================
+  
 const produitsFiltres = tousLesProduits.filter((produit) => {
   const marqueOk = filtreMarque === "Toutes" || produit.Marque === filtreMarque
   return marqueOk // ← supprime la condition gamme
@@ -46,15 +36,7 @@ const produitsFiltres = tousLesProduits.filter((produit) => {
       <ProductNav />
 
       <div className="max-w-7xl mx-auto px-4 py-10">
-        {/* <h1 className="text-2xl font-medium text-gray-900 mb-8">Raquettes</h1>  si besoin je peux définir un titre  mais étant donné qu'on sait déja où on est puisque que c'est notre selection dans la nav je le laisse ici comme ca au cas ou */}
-
-        {/* ============================================================
-            4. LES BOUTONS DE FILTRE
-            Quand tu cliques sur un bouton → setFiltreMarque("Yonex")
-            → React re-render → produitsFiltres se recalcule
-            → seuls les produits Yonex s'affichent
-        ============================================================ */}
-
+       
       
         {/* Filtre par Marque */}
         <div className="mb-8">
@@ -81,11 +63,7 @@ const produitsFiltres = tousLesProduits.filter((produit) => {
           {produitsFiltres.length} produit{produitsFiltres.length > 1 ? "s" : ""}
         </p>
 
-        {/* ============================================================
-            5. LA GRILLE DE PRODUITS
-            On affiche produitsFiltres (pas tousLesProduits)
-            Donc si filtreMarque = "Yonex" → seulement les Yonex
-        ============================================================ */}
+       
         {produitsFiltres.length === 0 ? (
           <p className="text-gray-400 text-sm py-20 text-center">
             Aucun produit ne correspond à ces filtres.

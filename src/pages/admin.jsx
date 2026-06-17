@@ -1,8 +1,30 @@
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 
 export default function Admin() {
 
-//========== Ici je regroupes les Hook de mon pannel admin
+const navigate = useNavigate()
+const [autorise, setAutorise] = useState(false)
+
+useEffect(() => {
+  const userStored = localStorage.getItem('user')
+
+  if (!userStored) {
+    navigate('/connexion')
+    return
+  }
+
+  const user = JSON.parse(userStored)
+
+  if (user.role !== 'admin') {
+    navigate('/')
+    return
+  }
+
+  setAutorise(true)
+}, [])
+
+//Ici je regroupes les Hook de mon pannel admin
 
 const [produits, setProduits] = useState([])
 const [nouveauProduit, setNouveauProduit] = useState({
@@ -36,9 +58,9 @@ const [nouveauClient, setNouveauClient] = useState({
 const [clientAModifier, setClientAModifier] = useState(null)
 const [commandes, setCommandes] = useState([])
 
-//========== Fonctions d'appel API
+//Fonctions d'appel API
 
-// ==========PRODUITS==========
+//PRODUITS
 useEffect(() => {
   fetch("https://hellobad.alwaysdata.net/produits.php")
     .then(res => res.json())
@@ -81,7 +103,7 @@ const modifierProduit = () => {
   })
 }
 
-// ==========CATEGORIES==========
+//CATEGORIES
 useEffect(() => {
   fetch("https://hellobad.alwaysdata.net/categories.php")
     .then(res => res.json())
@@ -124,7 +146,7 @@ const modifierCategorie = () => {
   })
 }
 
-// ==========CLIENTS==========
+//CLIENTS
 useEffect(() => {
   fetch("https://hellobad.alwaysdata.net/clients.php")
     .then(res => res.json())
@@ -167,7 +189,7 @@ const modifierClient = () => {
   })
 }
 
-// ==========COMMANDES==========
+//COMMANDES
 useEffect(() => {
   fetch("https://hellobad.alwaysdata.net/commandes.php")
     .then(res => res.json())
@@ -182,6 +204,10 @@ const supprimerCommande = (id) => {
   })
   .then(res => res.json())
   .then(() => setCommandes(commandes.filter(c => c.ID_Commande !== id)))
+}
+
+if (!autorise) {
+  return null
 }
 
 return (
@@ -203,7 +229,7 @@ return (
       ))}
     </div>
 
-    {/* ==========PRODUITS========== */}
+    {/*PRODUITS*/}
     {onglet === "produits" && (
       <div>
         <table className="w-full text-sm text-left border border-gray-200">
@@ -298,7 +324,7 @@ return (
       </div>
     )}
 
-    {/* ==========CATEGORIES========== */}
+    {/*CATEGORIES*/}
     {onglet === "categories" && (
       <div>
         <table className="w-full text-sm text-left border border-gray-200">
@@ -364,7 +390,7 @@ return (
       </div>
     )}
 
-    {/* ==========MEMBRES========== */}
+    {/*MEMBRES*/}
     {onglet === "membres" && (
       <div>
         <table className="w-full text-sm text-left border border-gray-200">
@@ -453,7 +479,7 @@ return (
       </div>
     )}
 
-    {/* ==========COMMANDES========== */}
+    {/*COMMANDES*/}
     {onglet === "commandes" && (
       <div>
         <table className="w-full text-sm text-left border border-gray-200">
