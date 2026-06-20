@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import Headvideo from "../components/ui/Headvideo.jsx"
 import ProductNav from "../components/layout/ProductNav.jsx"
-import Cardproduct from "../components/ui/Cardproduct.jsx"
 import { useCart } from "../context.jsx"
 
 
@@ -29,7 +28,7 @@ useEffect(() => {
   
 const produitsFiltres = tousLesProduits.filter((produit) => {
   const marqueOk = filtreMarque === "Toutes" || produit.Marque === filtreMarque
-  return marqueOk // ← supprime la condition gamme
+  return marqueOk // ici je supprime la condition gamme qui pourrait devenir un axe d'amélioration 
 })
   return (
     <div>
@@ -115,3 +114,4 @@ const produitsFiltres = tousLesProduits.filter((produit) => {
     </div>
   )
 }
+

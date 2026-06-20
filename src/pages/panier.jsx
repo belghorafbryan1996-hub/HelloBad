@@ -5,13 +5,16 @@ export default function PagePanier() {
 
   const total = panier.reduce((sum, p) => sum + parseFloat(p.Prix_TTC), 0)
 
+// ici j'appel la fonction passer une commande au moment ou la client ajoute un produit dans son panier.
+// ici j'envoie une requete à mon API PHP grâce a mon fetch, vers l'endpoint qui crée la session de paiement Stripe tout ca sans modifier le contenu de la page 
+  
   const passerCommande = () => {
-  fetch("https://hellobad.alwaysdata.net/create-checkout-session.php", {
+  fetch("https://hellobad.alwaysdata.net/create-checkout-session.php", {      
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ items: panier })
   })
-  .then(res => res.json())
+  .then(res => res.json())            //ici je convertis les données recu de ma BDD afin que react pour les afficher à l'utilisateurs
   .then(data => {
     window.location.href = data.url // redirige vers Stripe
   })

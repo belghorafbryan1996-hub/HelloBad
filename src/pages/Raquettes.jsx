@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import Headvideo from "../components/ui/Headvideo.jsx"
 import ProductNav from "../components/layout/ProductNav.jsx"
-import Cardproduct from "../components/ui/Cardproduct.jsx"
 import { useCart } from "../context.jsx"
 
 

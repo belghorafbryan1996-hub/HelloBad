@@ -12,7 +12,6 @@ import {
   TabPanels,
 } from '@headlessui/react'
 import { Bars3Icon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import logoHelloBad from "../../assets/images/logo_HellBad.png"
 import { Link, useNavigate } from 'react-router-dom'
 import { useCart } from "../../context.jsx"
 
@@ -116,7 +115,7 @@ export default function Example() {
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <Link to="/">
-                  <img src={logoHelloBad} alt="logo_HelloBad" className="h-8 w-auto"/>
+                  <img src="/images/HelloBad.png" alt="HelloBad" className="h-8 w-auto"/>
                 </Link>
               </div>
 

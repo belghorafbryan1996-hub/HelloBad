@@ -1,6 +1,5 @@
 
 import Headvideo from '../components/ui/Headvideo.jsx'
-import Cardproduct from '../components/ui/Cardproduct.jsx'
 import { Link } from 'react-router-dom'
 
 
