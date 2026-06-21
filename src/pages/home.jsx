@@ -25,7 +25,6 @@ function Home() {
     <div>
       <Head slogan="Équipe-toi comme un pro, bats-toi comme un guerrier." button="Offres"/>
       <Headvideo videoSrc="/mp4home.mp4"/>
-      <Cardproduct />
     </div>
   )
 }

@@ -14,6 +14,7 @@ import Contact from './pages/contact.jsx'
 import Mentionlegale from './pages/mentionlegale.jsx'
 import Connexion from './pages/connexion.jsx'
 import Inscription from './pages/inscription.jsx'
+import Cgv from './pages/cgv.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
@@ -49,6 +50,7 @@ function App() {
             <Route path="/mentionlegale" element={<Mentionlegale />} />
             <Route path="/connexion" element={<Connexion />} />
             <Route path="/inscription" element={<Inscription />} />
+            <Route path="/cgv" element={<CGV />} />
           </Routes>
           </main>
           <Footer />
