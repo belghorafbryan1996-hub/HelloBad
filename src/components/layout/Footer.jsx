@@ -89,7 +89,7 @@ export default function Footer() {
           </a>
 
         </div>
-        <div className="my-5">© Copyright 2024. All Rights Reserved. HELLOBAD</div>
+        <div className="my-5">© Copyright 2026. All Rights Reserved. HELLOBAD</div>
       </div>
     </div>
   )
