@@ -50,7 +50,7 @@ function App() {
             <Route path="/mentionlegale" element={<Mentionlegale />} />
             <Route path="/connexion" element={<Connexion />} />
             <Route path="/inscription" element={<Inscription />} />
-            <Route path="/cgv" element={<CGV />} />
+            <Route path="/cgv" element={<Cgv />} />
           </Routes>
           </main>
           <Footer />
