@@ -21,5 +21,17 @@ export default function MentionsLegales() {
       <p>Ce site n'utilise pas de cookies.</p>
 
     </div>
+
+        {/* Retour */}
+      <div className="mt-12 border-t border-slate-200 pt-6">
+        <Link
+          to="/"
+          className="inline-flex items-center text-sm font-medium text-cyan-500 hover:underline"
+        >
+          ← Retour à l'accueil
+        </Link>
+      </div>
+    </main>
+
   )
 }

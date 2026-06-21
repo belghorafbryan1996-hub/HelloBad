@@ -18,7 +18,7 @@ function Cgv() {
         <Article titre="Article 1 — Objet et champ d'application">
           Les présentes Conditions Générales de Vente (CGV) régissent les ventes
           de produits proposés sur le site HelloBad, accessible à l'adresse
-          [URL], entre [RAISON SOCIALE / NOM] et tout client effectuant un achat
+          https://hellobad.onrender.com, entre HelloBad et tout client effectuant un achat
           sur le site (ci-après « le Client »). Toute commande implique
           l'acceptation sans réserve des présentes CGV.
         </Article>
@@ -43,8 +43,8 @@ function Cgv() {
         </Article>
 
         <Article titre="Article 4 — Prix">
-          Les prix sont indiqués en euros, toutes taxes comprises (TTC). [Préciser
-          si les frais de livraison sont en sus.] Le vendeur se réserve le droit
+          Les prix sont indiqués en euros, toutes taxes comprises (TTC). 
+          Le vendeur se réserve le droit
           de modifier ses prix à tout moment, étant entendu que le prix appliqué
           est celui en vigueur au moment de la validation de la commande.
         </Article>
@@ -66,9 +66,9 @@ function Cgv() {
           Les produits sont livrés à l'adresse de livraison indiquée par le
           Client lors de la commande.
           <ul className="mt-2 list-disc space-y-1 pl-5">
-            <li>Zones de livraison : [À PRÉCISER]</li>
-            <li>Délais : [À PRÉCISER]</li>
-            <li>Frais de livraison : [À PRÉCISER]</li>
+            <li>Zones de livraison : XX XX XX XXXXX</li>
+            <li>Délais : XX XX XX XXXXX</li>
+            <li>Frais de livraison : XX XX XX XXXXX</li>
           </ul>
           <span className="mt-2 block">
             Les délais sont donnés à titre indicatif. En cas de retard, le Client
@@ -81,9 +81,9 @@ function Cgv() {
           consommation, le Client dispose d'un délai de quatorze (14) jours à
           compter de la réception des produits pour exercer son droit de
           rétractation, sans avoir à justifier de motif. Pour l'exercer, le
-          Client notifie sa décision à [EMAIL / ADRESSE]. Les produits doivent
+          Client notifie sa décision à Hellobad@gmail.com. Les produits doivent
           être retournés dans leur état d'origine. Les frais de retour sont à la
-          charge de [À PRÉCISER]. Le remboursement intervient dans un délai de
+          charge du client. Le remboursement intervient dans un délai de
           quatorze (14) jours après réception ou preuve d'expédition du retour.
         </Article>
 
@@ -92,32 +92,32 @@ function Cgv() {
           la garantie légale de conformité (articles L217-3 et suivants du Code
           de la consommation) et de la garantie contre les vices cachés
           (articles 1641 et suivants du Code civil). Le Client peut exercer ces
-          garanties en contactant [EMAIL].
+          garanties en contactant Hellobad@gmail.com.
         </Article>
 
         <Article titre="Article 10 — Responsabilité">
           Le vendeur ne saurait être tenu responsable de l'inexécution du contrat
           en cas de force majeure ou de fait imprévisible et insurmontable d'un
-          tiers. [À adapter selon ta situation.]
+          tiers. 
         </Article>
 
         <Article titre="Article 11 — Données personnelles">
           Les données collectées sont nécessaires au traitement des commandes et
           traitées conformément à la politique de confidentialité du site et au
           RGPD. Le Client dispose d'un droit d'accès, de rectification et de
-          suppression de ses données en contactant [EMAIL].
+          suppression de ses données en contactant Hellobad@gmail.com.
         </Article>
 
         <Article titre="Article 12 — Propriété intellectuelle">
           L'ensemble des éléments du site (textes, images, logos) est protégé par
-          le droit de la propriété intellectuelle et reste la propriété de [NOM]
+          le droit de la propriété intellectuelle et reste la propriété de HelloBad
           ou de ses partenaires.
         </Article>
 
         <Article titre="Article 13 — Litiges et droit applicable">
           Les présentes CGV sont soumises au droit français. En cas de litige, le
           Client peut recourir gratuitement à un médiateur de la consommation
-          [nom du médiateur à indiquer] avant toute action judiciaire. À défaut
+          avant toute action judiciaire. À défaut
           de résolution amiable, les tribunaux français sont compétents.
         </Article>
       </div>
@@ -126,7 +126,7 @@ function Cgv() {
       <div className="mt-12 border-t border-slate-200 pt-6">
         <Link
           to="/"
-          className="inline-flex items-center text-sm font-medium text-blue-900 hover:underline"
+          className="inline-flex items-center text-sm font-medium text-cyan-400 hover:underline"
         >
           ← Retour à l'accueil
         </Link>
