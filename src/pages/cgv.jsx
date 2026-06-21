@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 // Page Conditions Générales de Vente — HelloBad
-function CGV() {
+function Cgv() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-12 text-slate-700">
       {/* En-tête */}
