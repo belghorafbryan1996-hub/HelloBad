@@ -145,4 +145,4 @@ function Article({ titre, children }) {
   );
 }
 
-export default CGV;
+export default Cgv;
