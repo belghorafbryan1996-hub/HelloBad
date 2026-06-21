@@ -115,7 +115,7 @@ export default function Example() {
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <Link to="/">
-                  <img src="/images/HelloBad.png" alt="HelloBad" className="h-8 w-auto"/>
+                  <img src="/images/logo-hellobad.png" alt="HelloBad" className="h-8 w-auto"/>
                 </Link>
               </div>
 
